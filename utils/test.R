@@ -1,10 +1,13 @@
-source("myread.ENVI.R")
-source("imagematrix.R")
+source("utils/myread.ENVI.R")
+source("utils/imagematrix.R")
 require(ggplot2)
 require(reshape2)
 require(ggthemes)
 
+args=commandArgs(T)
 
-imagepath <- "../Statistics-SAR-Intensity-master 2/Data/Images/ESAR/"
+imagepath <- args[1]
 
-print('hello')
+temp <- myread.ENVI(paste(imagepath,args[2], sep = ""),paste(imagepath,args[2],".hdr", sep = ""))
+
+write.csv(temp,paste("results/",args[3],".csv", sep = ""))
