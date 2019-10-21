@@ -18,7 +18,7 @@ R是个合作计划，有许多人为之做出了贡献.
 [原来保存的工作空间已还原]
 
 > source("utils/myread.ENVI.R")
-> source("utils/imagematrix.R")
+> # source("utils/imagematrix.R")
 > require(ggplot2)
 载入需要的程辑包：ggplot2
 > require(reshape2)
@@ -35,5 +35,5 @@ R是个合作计划，有许多人为之做出了贡献.
 > write.csv(temp,paste("results/",args[3],".csv", sep = ""))
 > 
 > proc.time()
-  用户   系统   流逝 
- 3.098  0.292 10.514 
+ 用户  系统  流逝 
+2.895 0.226 4.406 

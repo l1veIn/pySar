@@ -1,9 +1,7 @@
 source("utils/myread.ENVI.R")
-source("utils/imagematrix.R")
 require(ggplot2)
 require(reshape2)
 require(ggthemes)
-
 args=commandArgs(T)
 
 imagepath <- args[1]
